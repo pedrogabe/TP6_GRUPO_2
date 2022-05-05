@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace TP5_GRUPO_2
+namespace DB
 {
-    public static class DB
+    public static class DBClass
     {
-        private static string connString = "Data Source=localhost\\sqlexpress; Initial Catalog=BDSucursales; Integrated Security=True";
+        private static string connString = "Data Source=localhost\\sqlexpress; Initial Catalog=Neptuno; Integrated Security=True";
         
         public static SqlConnection GetConnection()
         {
