@@ -11,7 +11,18 @@ namespace TP6_GRUPO2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                LoadGridView();
+            }
+        }
 
+        protected void LoadGridView()
+        {
+			//TODO -> Hacer query a la base
+			//TODO -> Asignar DataSource
+			//TODO -> DataBind()
+            throw new NotImplementedException();
         }
     }
 }
