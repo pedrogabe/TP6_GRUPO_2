@@ -10,9 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Grupo N°2"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="GRUPO N°2" Font-Bold="True"></asp:Label>
+            <br />
+            <br />
             <br />
             <asp:HyperLink ID="lnkEjercicio1" runat="server" NavigateUrl="~/Ejercicio1.aspx">Ejercicio 1</asp:HyperLink>
+            <br />
             <br />
             <asp:HyperLink ID="lnkEjercicio2" runat="server" NavigateUrl="~/Ejercicio2.aspx">Ejercicio 2</asp:HyperLink>
         </div>
