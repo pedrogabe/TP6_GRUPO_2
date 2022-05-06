@@ -67,25 +67,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ejercicio1.aspx" />
-    <Content Include="Ejercicio2.aspx" />
+    <Content Include="Ejercicio1\Ejercicio1.aspx" />
+    <Content Include="Ejercicio2\Ejercicio2.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB.cs" />
-    <Compile Include="Ejercicio1.aspx.cs">
+    <Compile Include="Neptuno.cs" />
+    <Compile Include="Ejercicio1\Ejercicio1.aspx.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ejercicio1.aspx.designer.cs">
+    <Compile Include="Ejercicio1\Ejercicio1.aspx.designer.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Ejercicio2.aspx.cs">
+    <Compile Include="Ejercicio2\Ejercicio2.aspx.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ejercicio2.aspx.designer.cs">
+    <Compile Include="Ejercicio2\Ejercicio2.aspx.designer.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
