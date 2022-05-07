@@ -23,5 +23,11 @@ namespace TP6_GRUPO2
             gvProductos.DataSource = gProductos.ObtenerTodosLosProductos();
             gvProductos.DataBind();
         }
+
+        protected void gvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvProductos.PageIndex = e.NewPageIndex;
+            LoadGridView();
+        }
     }
 }
