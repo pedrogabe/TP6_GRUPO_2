@@ -73,8 +73,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB.cs" />
-    <Compile Include="Neptuno.cs" />
+    <Compile Include="Conexiones\DB.cs" />
+    <Compile Include="Conexiones\GestionNeptuno.cs" />
+    <Compile Include="Conexiones\Neptuno.cs" />
     <Compile Include="Ejercicio1\Ejercicio1.aspx.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

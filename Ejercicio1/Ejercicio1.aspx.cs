@@ -19,10 +19,9 @@ namespace TP6_GRUPO2
 
         protected void LoadGridView()
         {
-			//TODO -> Hacer query a la base
-			//TODO -> Asignar DataSource
-			//TODO -> DataBind()
-            throw new NotImplementedException();
+            GestionNeptuno gProductos = new GestionNeptuno();
+            gvProductos.DataSource = gProductos.ObtenerTodosLosProductos();
+            gvProductos.DataBind();
         }
     }
 }
