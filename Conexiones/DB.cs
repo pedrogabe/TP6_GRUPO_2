@@ -68,9 +68,10 @@ namespace DB
                 cmd.Connection.Open();
                 int affected = cmd.ExecuteNonQuery();
                 cmd.Connection.Close();
-                return affected;                
+                return affected;
             }
-            catch(Exception ex)
+
+            catch
             {
                 return null;
             }
