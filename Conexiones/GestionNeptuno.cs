@@ -25,7 +25,7 @@ namespace TP6_GRUPO2
             else if (affected == 1) return "Producto eliminado";
             else return "Error al eliminar producto";
         }
-        public DataTable ObtenerTodosLosProductos()
+        public static DataTable ObtenerTodosLosProductos()
         {
             return DBClass.ObtenerTabla("SELECT * FROM Productos");
         }

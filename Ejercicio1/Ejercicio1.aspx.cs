@@ -19,8 +19,7 @@ namespace TP6_GRUPO2
 
         protected void LoadGridView()
         {
-            GestionNeptuno gProductos = new GestionNeptuno();
-            gvProductos.DataSource = gProductos.ObtenerTodosLosProductos();
+            gvProductos.DataSource = GestionNeptuno.ObtenerTodosLosProductos();
             gvProductos.DataBind();
         }
 
