@@ -4,10 +4,8 @@ using DB;
 
 namespace TP6_GRUPO2
 {
-    public class GestionNeptuno
+    public static class GestionNeptuno
     {
-        // Constructor
-        public GestionNeptuno() { }
 
         // Metodos
 
