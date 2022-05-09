@@ -70,6 +70,7 @@
     <Content Include="Ejercicio1\Ejercicio1.aspx" />
     <Content Include="Ejercicio2\Ejercicio2.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="Opciones Ejercicio 2\SeleccionarProducto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,12 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones Ejercicio 2\SeleccionarProducto.aspx.cs">
+      <DependentUpon>SeleccionarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones Ejercicio 2\SeleccionarProducto.aspx.designer.cs">
+      <DependentUpon>SeleccionarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
