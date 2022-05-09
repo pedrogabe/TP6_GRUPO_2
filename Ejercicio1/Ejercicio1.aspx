@@ -63,7 +63,7 @@
                 <SortedDescendingCellStyle BackColor="#D6DFDF" />
                 <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
-            <asp:Label runat="server" Text="Label" ID="lbl_event"></asp:Label>
+            <asp:Label runat="server" ID="lbl_event"></asp:Label>
         </div>
     </form>
 </body>
