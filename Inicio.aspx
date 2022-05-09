@@ -14,10 +14,10 @@
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="lnkEjercicio1" runat="server" NavigateUrl="~/Ejercicio1.aspx">Ejercicio 1</asp:HyperLink>
+            <asp:HyperLink ID="lnkEjercicio1" runat="server" NavigateUrl="~/Ejercicio1/Ejercicio1.aspx">Ejercicio 1</asp:HyperLink>
             <br />
             <br />
-            <asp:HyperLink ID="lnkEjercicio2" runat="server" NavigateUrl="~/Ejercicio2.aspx">Ejercicio 2</asp:HyperLink>
+            <asp:HyperLink ID="lnkEjercicio2" runat="server" NavigateUrl="~/Ejercicio2/Ejercicio2.aspx">Ejercicio 2</asp:HyperLink>
         </div>
     </form>
 </body>
