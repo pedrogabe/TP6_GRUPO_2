@@ -76,5 +76,24 @@ namespace DB
                 return null;
             }
         }
+
+        /// <summary>
+        /// Realiza una consulta a la base de datos y deuvelve la primera tabla del resultado.
+        /// </summary>
+        /// <param name="query">Consulta SQL</param>
+        /// <returns>Primera tabla del DataSet obtenido o null si falla la consulta.</returns>
+        public static DataTable ObtenerTabla(string query)
+        {
+            try
+            {
+                DataSet ds = Query(query);
+                return ds?.Tables[0];
+            }
+            catch (ArgumentNullException)
+            {
+                System.Diagnostics.Trace.WriteLine("Invalid query");
+                throw;
+            }
+        }
     }
 }

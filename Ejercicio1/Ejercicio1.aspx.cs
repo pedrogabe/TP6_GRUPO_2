@@ -56,14 +56,15 @@ namespace TP6_GRUPO2
 
         protected void gvProductos_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string s_IdProducto = ((Label)gvProductos.Rows[e.RowIndex].FindControl("lbl_eit_id")).Text;
-            string s_Nombre = ((TextBox)gvProductos.Rows[e.RowIndex].FindControl("txt_eit_NombreProducto")).Text;
-            string s_Cantidad = ((TextBox)gvProductos.Rows[e.RowIndex].FindControl("txt_eit_CantidadPorUnidad")).Text;
-            string s_Precio = ((TextBox)gvProductos.Rows[e.RowIndex].FindControl("txt_eit_PrecioUnidad")).Text;
-            int? affected = DB.DBClass.NonQuery("ActualizaProducto @0, @1, @2, @3", s_IdProducto, s_Nombre, s_Cantidad, s_Precio);
+            GridViewRow updatingRow = gvProductos.Rows[e.RowIndex];
+            string s_IdProducto = ((Label)updatingRow.FindControl("lbl_eit_id")).Text;
+            string s_Nombre = ((TextBox)updatingRow.FindControl("txt_eit_NombreProducto")).Text;
+            string s_Cantidad = ((TextBox)updatingRow.FindControl("txt_eit_CantidadPorUnidad")).Text;
+            string s_Precio = ((TextBox)updatingRow.FindControl("txt_eit_PrecioUnidad")).Text.Replace(',','.');
+
+            lbl_event.Text = GestionNeptuno.ActualizarProducto(s_IdProducto, s_Nombre, s_Cantidad, s_Precio);
             gvProductos.EditIndex = -1;
-            if (affected == 1) { lbl_event.Text = "Editado exitosamente"; }
-            else { lbl_event.Text = "Error!"; }
+            
             LoadGridView();
         }
     }
