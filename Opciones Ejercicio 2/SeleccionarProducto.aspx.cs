@@ -56,21 +56,32 @@ namespace TP6_GRUPO2.Opciones_Ejercicio_2
 
         }
 
-       
 
         protected void gvSeleccionarProducto_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
+
+                        
             int i_IdProducto = Convert.ToInt32(((Label)gvSeleccionarProducto.Rows[e.NewSelectedIndex].FindControl("lblIdProducto")).Text);
             String s_NombreProducto = ((Label)gvSeleccionarProducto.Rows[e.NewSelectedIndex].FindControl("lblNombreProducto")).Text;
             int i_IdProveedor = Convert.ToInt32(((Label)gvSeleccionarProducto.Rows[e.NewSelectedIndex].FindControl("lblIdProveedor")).Text);
             decimal d_PrecioUnidad = Convert.ToDecimal(((Label)gvSeleccionarProducto.Rows[e.NewSelectedIndex].FindControl("lblPrecioUnidad")).Text);
-            lblMensaje.Text = "Producto agregado: "+s_NombreProducto;
-
+            
             if (Session["tabla"] == null)
             {
+                Session["list"] = new List<int>();
                 Session["tabla"] = crearTabla();
             }
-            agregarFila(((DataTable)Session["tabla"]), i_IdProducto, s_NombreProducto, i_IdProveedor, d_PrecioUnidad);
+
+            if (((List<int>)Session["list"]).Contains(i_IdProducto))
+            {
+                lblMensaje.Text = "Producto ya seleccionado!";
+            }
+            else 
+            {
+                ((List<int>)Session["list"]).Add(i_IdProducto);
+                agregarFila(((DataTable)Session["tabla"]), i_IdProducto, s_NombreProducto, i_IdProveedor, d_PrecioUnidad);
+                lblMensaje.Text = "Producto agregado: " + s_NombreProducto;    
+            }
         }
     }
 }
